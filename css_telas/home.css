@@ -1,22 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
 html{
     width: 100%;
     height: 100%;
     padding: 0;
     margin: 0;
-    background-image: url(../images/background.jpg);
-    background-repeat: no-repeat;
+    background-color: #C2A78C;
+    z-index: 10;
 }
-button{
+#btn_sobre{
+    position: relative;
     display: flex;
     background-color: rgba(0, 0, 0, 0);
     color: white;
     border: none;
-    border-radius: 100%;
+    border-radius: 25px;
+    font-size: 25px;
+    font-family:'Bree Serif', serif;
 }
-button img{
-    width: 15px;
-    height: 15px;
+#btn_sobre img{
+    padding-right: 5px;
+    width: 20px;
+    height: 20px;
     position: relative;
-    top: 12px;
+    top: 35px;
     margin-right: 3px;
+}
+.btns{
+    padding: 20px;
+    border-radius: 35px;
+    font-size: 18px;
+    border-color: rgba(0, 0, 0, 0);
+    font-family: 'Bree Serif', serif;
+    text-align: center;
+    position: relative;
+    left: 935px;
+    bottom: 125px;
+}
+#session{
+    background-color: white;
+    color: black;
+    margin-right: 15px;
+}
+#create{
+    background-color: black;
+    color: white;
+}
+#text_1{
+    text-align: center;
+    font-family:'Bree Serif', serif;;
+    font-size: 80px;
+    position: relative;
+    left: 400px;
+    bottom: 105px;
+    color: white;   
+}
+#text_2{
+    text-align: center;
+    font-family:'Bree Serif', serif;
+    font-size: 30px;
+    position: relative;
+    left: 400px;
+    bottom: 150px;
 }
