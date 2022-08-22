@@ -97,7 +97,50 @@ body{
     color: white;
 }
 
-@media(max-width:1450px){
+@media(max-width:1700px){
+    .black img{right:-23rem;
+        top: 9rem;
+        width: 100rem;}
     .container{width: 30%;}
     html{font-size: 90%;}
+}
+@media(max-width:1024px){
+    .black img{right:-23rem;
+        top: 3rem;
+        width: 90rem;}
+    container{width: 100%;}
+    html{font-size: 80%;}
+}
+@media(max-width:900px){
+    .black img{right:-23rem;
+    top: 3rem;
+    width: 90rem;}
+    container{width: 10%;}
+    html{font-size: 70%;}
+}
+@media(max-width:899px){
+    .container{width:100%}
+    .black{width: 40%;}
+    html{font-size: 50%;}
+    #container_texts{
+    margin-right: 5rem;
+    }
+    .btns_flex{
+        margin-right: 7rem;
+    }
+    .btns_flex button{
+        margin-top: 3rem;
+    }
+    .black img{
+        width: 100rem;
+        right: -19rem;
+        top: 10rem;
+    }
+}
+@media(max-width:800px){
+    .black img{
+        width: 100rem;
+        right: -26rem;
+        top: 10rem;
+    }
 }
