@@ -9,6 +9,7 @@ body{
     overflow: hidden;
 }
 a{
+    font-family:'Bree Serif',sans-serif;
     text-decoration: none;
     color:white
 }
@@ -80,7 +81,10 @@ a{
     padding: 1.5rem;    
     border-radius: 2.5rem;
     margin-left: 1.5rem;
-    font-family:'Bree Serif',sans-serif;
+}
+#sessão{
+    font-family: 'Bree Serif',sans-serif;
+    color: black;
 }
 .all{
     display: flex;
@@ -157,23 +161,7 @@ a{
         margin-top: 2rem;
     }
 }
-@media(max-width:660px){
-    .container{width:80%}
-    .black{width: 40%;}
-    html{font-size: 50%;}
-    #container_texts{
-    margin-right: 5rem;
+@media(max-width:620px){
+    html{
+        font-size: 50%;}
     }
-    .btns_flex{
-        margin-right: 7rem;
-    }
-    .btns_flex button{
-        margin-top: 3rem;
-    }
-    .about{
-        margin-top: 5rem;
-    }
-    .btns_flex button{margin-top: 2rem;
-            margin-left: 10rem;
-    }
-}
