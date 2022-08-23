@@ -99,6 +99,7 @@ a{
 #create{
     background-color: black;
     color: white;
+    border: none;
 }
 #sessão{
     color: black;
