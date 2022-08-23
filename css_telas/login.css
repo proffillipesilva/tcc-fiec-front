@@ -4,8 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    font-family: "Open Sans";
-    color: #fff;
+    color: black;
 }
 section{
     background-color: #C2A78C;
@@ -23,7 +22,7 @@ section{
     box-shadow:7px 7px 60px #000;
 }
 h1{
-    color: #ffffff;
+    color: black;
     font-size: 2em;
     text-transform: uppercase;
     text-align: center;
@@ -36,7 +35,7 @@ h1{
     display: block;
     width: 100%;
     color:#000;
-    background: #ddd;
+    background: white;
     outline: none;
     border: none;
     margin: 1em 0;
@@ -44,7 +43,7 @@ h1{
 
 }         
 .control .btn{
-    color: #fff;
+    color: whitesmoke;
     text-transform: uppercase;
     background: black;
     opacity: .7;
@@ -59,7 +58,7 @@ p{
 }
 a{
     text-decoration: none;
-    color: #fff;
+    color: black;
     opacity: .7;
 }
 a:hover{
@@ -71,4 +70,22 @@ label,a,input,span{
 }
 input{
     border-radius: 2rem;
+}
+.control button{
+    height: 100%;
+    padding: 10px;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    color:#000;
+    outline: none;
+    border: none;
+    margin: 1em 0;  
+    font-family:'Bree Serif',sans-serif;
+    border-radius: 25px;
+}
+.control button span{
+    position: relative;
+    bottom: 16px;
+    margin-right: 10px;
 }
