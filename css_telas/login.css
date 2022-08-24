@@ -1,91 +1,130 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
-body{
-    color: black;
-}
-section{
-    background-color: #C2A78C;
+
+html,
+body {
+    display: grid;
     height: 100vh;
     width: 100%;
+    place-items: center;
+    background: rgb(2,0,36);
+    background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(100,85,83,1) 0%, rgba(224,193,148,1) 100%);
 }
-.form-container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 380px;
-    padding: 50px 30px;
-    border-radius: 10px;
-    box-shadow:7px 7px 60px #000;
-}
-h1{
-    color: black;
-    font-size: 2em;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 2rem;
-    font-family:'Bree Serif',sans-serif;
-}
-.control input{
-    padding: 10px;
-    font-size: 16px;
-    display: block;
-    width: 100%;
-    color:#000;
-    background: white;
-    outline: none;
-    border: none;
-    margin: 1em 0;
-    font-family:'Bree Serif',sans-serif;
 
-}         
-.control .btn{
-    color: whitesmoke;
-    text-transform: uppercase;
-    background: black;
-    opacity: .7;
-    transition:opacity .3s ease;
-    font-family:'Bree Serif',sans-serif;
+.container {
+    background: #fff;
+    max-width: 350px;
+    width: 100%;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
 }
-.btn:focus{
-    opacity: 1;
+
+.container form .title {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 20px 0 10px 0px;
+    position: relative;
 }
-p{
-    text-align: center;
+
+.container form .title:before {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(100,85,83,1) 0%, rgba(224,193,148,1) 100%);
 }
-a{
+
+.container form .input-box, .google button {
+    width: 100%;
+    height: 45px;
+    margin-top: 25px;
+    position: relative;
+}
+
+.container form .input-box input, .google button {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-size: 16px;
+    border: none;
+}
+
+.container form .underline::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #ccc;
+    left: 0;
+    bottom: 0;
+}
+
+.container form .underline::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(100,85,83,1) 0%, rgba(224,193,148,1) 100%);
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.3s ease;
+}
+
+.container form .input-box input:focus~.underline::after,
+.container form .input-box input:valid~.underline::after, .google button {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.container form .button {
+    margin: 40px 0 20px 0;
+}
+
+.container .input-box input[type="submit"], .google button{
+    background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(100,85,83,1) 0%, rgba(224,193,148,1) 100%);
+    font-size: 17px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container .input-box input[type="submit"]:hover, .google button:hover {
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(100,85,83,1) 0%, rgba(224,193,148,1) 100%);
+}   
+.google button{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    border: none;
+    justify-content: center;
+    padding: 4px;
+}
+.google button img{
+    height: 40px;
+    width: 40px;
+}
+.forgot a{
     text-decoration: none;
     color: black;
-    opacity: .7;
+    font-size: 17px;
+    font-weight: 500;
 }
-a:hover{
-    opacity: 1;
-}
-label,a,input,span{
-    font-family:'Bree Serif',sans-serif;
-    font-weight: bold;
-}
-input{
-    border-radius: 2rem;
-}
-.control button{
-    height: 100%;
-    padding: 10px;
-    font-size: 16px;
-    display: block;
-    width: 100%;
-    color:#000;
-    outline: none;
-    border: none;
-    margin: 1em 0;  
-    font-family:'Bree Serif',sans-serif;
-    border-radius: 25px;
-}
-.control button span{
-    position: relative;
-    bottom: 16px;
-    margin-right: 10px;
+.forgot{
+    text-align: center;
+    margin-top: 25px;
 }
