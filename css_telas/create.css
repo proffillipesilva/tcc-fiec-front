@@ -122,3 +122,16 @@ form .button input:hover {
         width: 5px;
     }
 }
+.input-box i{
+    right: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.input-box :is(i){
+    position: relative;
+    bottom: 37%;
+    left: 90%;
+    transform: translateY(-50%);
+    color: #999;
+    transition: all 0.2s linear;
+}

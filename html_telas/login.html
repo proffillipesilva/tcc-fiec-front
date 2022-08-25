@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css_telas/login.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <title>Login</title>
 </head>
 
@@ -18,7 +19,8 @@
                 <div class="underline"></div>
             </div>
             <div class="input-box">
-                <input type="password" placeholder="Digite sua senha" required>
+                <input type="password" id="senha" placeholder="Digite sua senha" required>
+                <i class="uil uil-eye-slash toggle"></i>
                 <div class="underline"></div>
             </div>
             <div class="conectado">
@@ -35,6 +37,23 @@
             <a href="#">Esqueceu a senha?</a>
         </div>
     </div>
+    <script>
+
+        const toggle = document.querySelector(".toggle"),
+            input = document.getElementById("senha");
+
+        toggle.addEventListener("click", () => {
+            if (input.type === "password") {
+                input.type = "text";
+                console.log("AQUI")
+                toggle.classList.replace("uil-eye-slash", "uil-eye");
+            } else {
+                input.type = "password";
+                toggle.classList.replace("uil-eye","uil-eye-slash");
+            }
+        })
+
+    </script>
 </body>
 
 </html>

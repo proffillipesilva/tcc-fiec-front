@@ -134,3 +134,15 @@ body {
 .conectado span{
     margin-left: 5px ;
 }
+.input-box i{
+    right: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.input-box :is(i){
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    transition: all 0.2s linear;
+}

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css_telas/create.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <title>Criar conta</title>
 </head>
 
@@ -35,9 +36,10 @@
                         <span class="details">Email:</span>
                         <input type="text" placeholder="Digite seu email" required>
                     </div>
-                    <div class="input-box">
+                    <div class="input-box" id="senha1">
                         <span class="details">Senha:</span>
-                        <input type="text" placeholder="Defina sua senha" required>
+                        <input type="password" id="senha" placeholder="Defina sua senha" required>
+                        <i class="uil uil-eye-slash toggle"></i>
                     </div>
                 </div>
                 <div class="button">
@@ -46,7 +48,23 @@
             </form>
         </div>
     </div>
+    <script>
 
+        const toggle = document.querySelector(".toggle"),
+            input = document.getElementById("senha");
+
+        toggle.addEventListener("click", () => {
+            if (input.type === "password") {
+                input.type = "text";
+                console.log("AQUI")
+                toggle.classList.replace("uil-eye-slash", "uil-eye");
+            } else {
+                input.type = "password";
+                toggle.classList.replace("uil-eye","uil-eye-slash");
+            }
+        })
+
+    </script>
 </body>
 
 </div>
