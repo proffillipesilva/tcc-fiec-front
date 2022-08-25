@@ -128,3 +128,9 @@ body {
     text-align: center;
     margin-top: 25px;
 }
+.conectado{
+    margin-top: 20px;
+}
+.conectado span{
+    margin-left: 5px ;
+}
