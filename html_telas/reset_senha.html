@@ -8,6 +8,64 @@
     <link rel="stylesheet" href="../css_telas/login.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <title>Recuperar senha</title>
+    <style>
+        .btnOpenModal {
+        font-size: x-large;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: blueviolet;
+        color: white;
+        cursor: pointer;
+        }
+
+        hr {
+            border: 0px;
+            border-top: 1px solid lightgray;
+        }
+
+        .modal-container {
+            width: 100vw;
+            position: fixed;
+            top: 30px;
+            display: none;
+            z-index: 999;
+            justify-content: center;
+        }
+
+        .modal {
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            width: 50%;
+        }
+
+        .active {
+            display: flex;
+        }
+
+        .active .modal {
+            animation: modal 1.4s;
+        }
+
+        @keyframes modal {
+            from {
+                opacity: 0;
+                transform: translate3d(0, -60px, 0);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        span {
+            margin: 10px auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,10 +77,33 @@
                 <div class="underline"></div>
             </div>
             <div class="input-box button">
-                <input type="submit" name="" value="Continuar">
+                <input class="btnOpenModal" type="submit" name="" onclick="openModal()" value="Continuar">
             </div>
         </form>
     </div>
+    <div class="modal-container">
+        <div class="modal">
+            <h1>Concluído</h1>
+            <span>
+            Acesse seu email para redefinir sua senha.
+            </span>
+            <div class="btns">
+                <button  class="input-box button" onclick="closeModal()"><a href="login.html">Voltar para o login</a> </button>
+                <button class="input-box button" onclick="closeModal()">Fechar</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const modal = document.querySelector('.modal-container')
+
+        function openModal() {
+            modal.classList.add('active')
+        }
+
+        function closeModal() {
+            modal.classList.remove('active')
+        }
+    </script>
 </body>
 
 </html>
