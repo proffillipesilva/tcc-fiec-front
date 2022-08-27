@@ -6,65 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css_telas/login.css">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <title>Recuperar senha</title>
     <style>
-        .btnOpenModal {
-        font-size: x-large;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        background-color: blueviolet;
-        color: white;
-        cursor: pointer;
-        }
+        a{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-size: 16px;
+    border: none;
+}
+a:focus~.underline::after,
+a:valid~.underline::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+a{
+    background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(100,85,83,1) 0%, rgba(224,193,148,1) 100%);
+    font-size: 17px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 
-        hr {
-            border: 0px;
-            border-top: 1px solid lightgray;
-        }
-
-        .modal-container {
-            width: 100vw;
-            position: fixed;
-            top: 30px;
-            display: none;
-            z-index: 999;
-            justify-content: center;
-        }
-
-        .modal {
-            display: flex;
-            flex-direction: column;
-            padding: 30px;
-            background-color: white;
-            border-radius: 10px;
-            width: 50%;
-        }
-
-        .active {
-            display: flex;
-        }
-
-        .active .modal {
-            animation: modal 1.4s;
-        }
-
-        @keyframes modal {
-            from {
-                opacity: 0;
-                transform: translate3d(0, -60px, 0);
-            }
-
-            to {
-                opacity: 1;
-                transform: translate3d(0, 0, 0);
-            }
-        }
-
-        span {
-            margin: 10px auto;
-        }
+a:hover{
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(100,85,83,1) 0%, rgba(224,193,148,1) 100%);
+}   
+a{
+    text-decoration: none;
+    color: #fff;
+    padding-left: 110px;
+    padding-right: 110px;
+}
+#back{
+    color: white;
+}
     </style>
 </head>
 
@@ -73,36 +50,29 @@
         <form action="#">
             <div class="title">Recuperar senha</div>
             <div class="input-box underline">
-                <input type="text" placeholder="Digite o Email" required>
+                <input id="email" type="text" placeholder="Digite o Email" required>
                 <div class="underline"></div>
             </div>
             <div class="input-box button">
-                <input class="btnOpenModal" type="submit" name="" onclick="openModal()" value="Continuar">
+                <input class="toggle" type="submit" name="" value="Enviar">
+            </div>
+            <div class="forgot" id="back">
+                <a href="login.html">Voltar</a>
             </div>
         </form>
     </div>
-    <div class="modal-container">
-        <div class="modal">
-            <h1>Concluído</h1>
-            <span>
-            Acesse seu email para redefinir sua senha.
-            </span>
-            <div class="btns">
-                <button  class="input-box button" onclick="closeModal()"><a href="login.html">Voltar para o login</a> </button>
-                <button class="input-box button" onclick="closeModal()">Fechar</button>
-            </div>
-        </div>
-    </div>
     <script>
-        const modal = document.querySelector('.modal-container')
 
-        function openModal() {
-            modal.classList.add('active')
-        }
+        const toggle = document.querySelector(".toggle")
+        const email = document.querySelector("#email")
+        toggle.addEventListener("click", () => {
+            if (toggle.value === "Enviar") {
+                email.disabled = true
+                email.value = "Seu email foi enviado!"
+                toggle.value = "Enviado";
+            } 
+        })
 
-        function closeModal() {
-            modal.classList.remove('active')
-        }
     </script>
 </body>
 
