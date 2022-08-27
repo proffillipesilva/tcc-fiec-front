@@ -8,40 +8,9 @@
     <link rel="stylesheet" href="../css_telas/login.css">
     <title>Recuperar senha</title>
     <style>
-        a{
-    width: 100%;
-    height: 100%;
-    outline: none;
-    font-size: 16px;
-    border: none;
-}
-a:focus~.underline::after,
-a:valid~.underline::after{
-    transform: scaleX(1);
-    transform-origin: left;
-}
-a{
-    background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(100,85,83,1) 0%, rgba(224,193,148,1) 100%);
-    font-size: 17px;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-a:hover{
-    letter-spacing: 1px;
-    background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(100,85,83,1) 0%, rgba(224,193,148,1) 100%);
-}   
-a{
-    text-decoration: none;
-    color: #fff;
-    padding-left: 110px;
-    padding-right: 110px;
-}
-#back{
-    color: white;
-}
+        #back{
+            margin-top: 0px;
+        }
     </style>
 </head>
 
@@ -56,13 +25,15 @@ a{
             <div class="input-box button">
                 <input class="toggle" type="submit" name="" value="Enviar">
             </div>
-            <div class="forgot" id="back">
-                <a href="login.html">Voltar</a>
+            <div class="input-box button" id="back">
+                <input id="back" type="submit"onclick="visitPage()" type="submit" name="" id="" value="Voltar">
             </div>
         </form>
     </div>
     <script>
-
+        function visitPage(){
+        window.location='login.html';
+        }
         const toggle = document.querySelector(".toggle")
         const email = document.querySelector("#email")
         toggle.addEventListener("click", () => {
@@ -72,7 +43,6 @@ a{
                 toggle.value = "Enviado";
             } 
         })
-
     </script>
 </body>
 

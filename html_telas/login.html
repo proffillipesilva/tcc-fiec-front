@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="../css_telas/login.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <title>Login</title>
+    <style>
+        .conectado{
+            margin-bottom: 0px;
+        }
+    </style>
 </head>
 
 <body>
@@ -24,7 +29,10 @@
                 <div class="underline"></div>
             </div>
             <div class="conectado">
-                <input type="checkbox" name="" id=""><span>Mantenha-me conectado</span>
+                <input style="margin-top: 15px;" type="checkbox" name=""><span>Mantenha-me conectado</span>
+            </div>
+            <div class="conectado">
+                <input type="checkbox" name="" ><span>Entrar como revisor</span>
             </div>
             <div class="input-box button">
                 <input type="submit" name="" value="Continuar">
@@ -38,7 +46,6 @@
         </div>
     </div>
     <script>
-
         const toggle = document.querySelector(".toggle"),
             input = document.getElementById("senha");
 
