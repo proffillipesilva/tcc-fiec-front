@@ -7,6 +7,12 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+#Btn_back{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 html,
 body {
@@ -34,7 +40,7 @@ body {
     position: relative;
 }
 
-.container form .title:before {
+.container form .title:before, #Btn_back {
     content: '';
     position: absolute;
     height: 4px;
@@ -52,7 +58,7 @@ body {
     position: relative;
 }
 
-.container form .input-box input, .google button {
+.container form .input-box input, .google button, #Btn_back {
     width: 100%;
     height: 100%;
     outline: none;
@@ -84,7 +90,8 @@ body {
 }
 
 .container form .input-box input:focus~.underline::after,
-.container form .input-box input:valid~.underline::after, .google button {
+.container form .input-box input:valid~.underline::after, .google button, #Btn_back:focus~.underline::after,
+#Btn_back:valid~.underline::after{
     transform: scaleX(1);
     transform-origin: left;
 }
@@ -93,7 +100,7 @@ body {
     margin: 40px 0 20px 0;
 }
 
-.container .input-box input[type="submit"], .google button{
+.container .input-box input[type="submit"], .google button, #Btn_back{
     background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(100,85,83,1) 0%, rgba(224,193,148,1) 100%);
     font-size: 17px;
     color: #fff;
@@ -102,7 +109,7 @@ body {
     transition: all 0.3s ease;
 }
 
-.container .input-box input[type="submit"]:hover, .google button:hover {
+.container .input-box input[type="submit"]:hover, .google button:hover, #Btn_back:hover {
     letter-spacing: 1px;
     background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(100,85,83,1) 0%, rgba(224,193,148,1) 100%);
 }   

@@ -23,26 +23,31 @@
                 <div class="underline"></div>
             </div>
             <div class="input-box button">
-                <input class="toggle" type="submit" name="" value="Enviar">
+                <input onclick="java()" class="toggle" type="submit" name="" value="Enviar">
             </div>
             <div class="input-box button" id="back">
-                <input id="back" type="submit"onclick="visitPage()" type="submit" name="" id="" value="Voltar">
+                <a id="Btn_back" href="login.html">Voltar</a>
             </div>
         </form>
     </div>
     <script>
-        function visitPage(){
-        window.location='login.html';
-        }
+        function java(){
         const toggle = document.querySelector(".toggle")
         const email = document.querySelector("#email")
         toggle.addEventListener("click", () => {
             if (toggle.value === "Enviar") {
                 email.disabled = true
-                email.value = "Seu email foi enviado!"
-                toggle.value = "Enviado";
-            } 
+                email.value = ""
+                email.placeholder = "Seu email foi enviado!"
+                toggle.value = "Enviar novamente?";
+            }
+            else if(toggle.value == "Enviar novamente?"){
+                email.disabled = false
+                email.placeholder = "Digite o Email"
+                toggle.value = "Enviar"
+            }
         })
+        }
     </script>
 </body>
 
