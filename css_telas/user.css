@@ -9,12 +9,8 @@
 }
 
 body {
+    
     background: #C2A78C;
-    background-image: url(images/bg-2.jpg);
-    background-size: cover;
-    background-position: center;
-    min-height: 450px;
-    height: 100vh;
 }
 
 nav {
