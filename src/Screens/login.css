@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+#Btn_back{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+html,
+body {
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    place-items: center;
+    background: rgb(2,0,36);
+    background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(100,85,83,1) 0%, rgba(224,193,148,1) 100%);
+}
+
+.container {
+    background: #fff;
+    max-width: 350px;
+    width: 100%;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+}
+
+.container form .title {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 20px 0 10px 0px;
+    position: relative;
+}
+
+.container form .title:before, #Btn_back {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(100,85,83,1) 0%, rgba(224,193,148,1) 100%);
+}
+
+.container form .input-box, .google button {
+    width: 100%;
+    height: 45px;
+    margin-top: 25px;
+    position: relative;
+}
+
+.container form .input-box input, .google button, #Btn_back {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-size: 16px;
+    border: none;
+}
+
+.container form .underline::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #ccc;
+    left: 0;
+    bottom: 0;
+}
+
+.container form .underline::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(100,85,83,1) 0%, rgba(224,193,148,1) 100%);
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.3s ease;
+}
+
+.container form .input-box input:focus~.underline::after,
+.container form .input-box input:valid~.underline::after, .google button, #Btn_back:focus~.underline::after,
+#Btn_back:valid~.underline::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.container form .button {
+    margin: 40px 0 20px 0;
+}
+
+.container .input-box input[type="submit"], .google button, #Btn_back{
+    background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(100,85,83,1) 0%, rgba(224,193,148,1) 100%);
+    font-size: 17px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container .input-box input[type="submit"]:hover, .google button:hover, #Btn_back:hover {
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(100,85,83,1) 0%, rgba(224,193,148,1) 100%);
+}   
+.google button{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    border: none;
+    justify-content: center;
+    padding: 4px;
+}
+.google button img{
+    height: 40px;
+    width: 40px;
+}
+.forgot a{
+    text-decoration: none;
+    font-size: 17px;
+    color: black;
+    font-weight: 500;
+}
+.forgot{
+    text-align: center;
+    margin-top: 25px;
+}
+.conectado{
+    margin-top: 20px;
+}
+.conectado span{
+    margin-left: 5px ;
+}
+.input-box i{
+    right: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.input-box :is(i){
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    transition: all 0.2s linear;
+}

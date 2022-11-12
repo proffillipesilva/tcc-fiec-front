@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>História que gente fala</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css_telas/ilustrador.css">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <input type="checkbox" name="" id="chk1">
+        <div class="logo"><a href="user.html"rel="noopener noreferrer"><img src="../images/Logo.svg" alt=""></a></div>
+        <div class="search-box">
+            <form>
+                <input type="text" name="search" id="srch" placeholder="Pesquise" required>
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <ul>
+            <li><a href="user.html">Top causos</a></li>
+            <li><a href="escritor.html">Crie seu causo</a></li>
+            <li><a href="ilustrador.html">Poste sua ilustração</a></li>
+            <li><a href="perfil.html">Meu perfil</a></li>
+        </ul>
+        <div class="menu">
+            <label for="chk1">
+                <i class="fa fa-bars"></i>
+            </label>
+        </div>
+    </header>
+    <section>
+        
+        <div class="container">
+            
+            <!-- Card 3 -->
+            <div class="card">
+                <img class="upload" src="../images/uploaad.png">
+                <!-- card-header -->
+
+                <!-- card-header -->
+
+                <!-- card-body -->
+                <p class="tituloo"><b>Traga arquivos para upload</b></p>
+                <form class="box" method="post" action="" enctype="multipart/form-data">
+                    <div class="box__input">
+                      <input class="arquivo" type="file" name="files[]" id="file" data-multiple-caption="{count} files selected" multiple />
+                      <button class="botao_upload" type="submit">Upload</button>
+                    </div>
+                    <div class="box__uploading">Uploading…</div>
+                    <div class="box__success">Done!</div>
+                    <div class="box__error">Error! <span></span>.</div>
+                  </form>
+            </div>
+
+        </section>
+</body>
+
+</html>
