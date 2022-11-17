@@ -1,17 +1,20 @@
 import React from 'react'
 import './home.css'
 import homeImage from "../images/info.png"
+import detail from "../images/detail.svg"
+import logo from "../images/Logo.svg"
+
 
 const Home = () => {
     return (
         <div>
 
             <div className="black">
-                <img src={homeImage} alt="" />
+                <img src={detail} alt="" />
             </div>
             <div className="all">
                 <div className="container">
-                    <img id="logo" src="../images/Logo.svg" alt="" />
+                    <img id="logo" src={logo}/>
                     <button onclick="" id="btn_sobre">
                         <img id="info" src={homeImage} alt="Icon Info" />
                         <a href="sobre_nos.html">Sobre nós</a>

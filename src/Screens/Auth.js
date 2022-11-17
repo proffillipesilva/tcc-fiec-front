@@ -5,6 +5,7 @@ import axiosInstance from '../myaxios';
 //import { GoogleLogin } from 'react-google-login';
 import { GoogleLogin } from '@react-oauth/google';
 import './login.css'
+import logoGoogle from "../images/google.svg"
 
 
 const Auth = (props) => {
@@ -59,7 +60,7 @@ const Auth = (props) => {
                 <input type="submit" name="" value="Continuar" />
             </div>
             <div className="google">
-                <button type="submit">Login com <img src="../images/google.svg" alt="" /></button>
+                <button type="submit">Login com <img src={logoGoogle}/></button>
             </div>
         </form>
         
@@ -67,7 +68,6 @@ const Auth = (props) => {
             <a href="reset_senha.html">Esqueceu a senha?</a>
         </div>
       </div>
-       
   )
 }
 
