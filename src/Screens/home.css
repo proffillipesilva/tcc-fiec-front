@@ -1,16 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
 
-body{
+.home{
+    position: fixed;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     padding: 0;
     margin: 0;
     background-color: #C2A78C;
     overflow: hidden;
+    z-index: 2;
 }
 a{
-    text-decoration: none;
-    color: white;
+    text-decoration: none !important;
+}
+#btn_sobre a {
+
+    color: white !important;
 }
 .black /*capeta de fundo preto */{
     position: absolute;

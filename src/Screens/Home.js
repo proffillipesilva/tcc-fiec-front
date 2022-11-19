@@ -3,11 +3,12 @@ import './home.css'
 import homeImage from "../images/info.png"
 import detail from "../images/detail.svg"
 import logo from "../images/Logo.svg"
+import { Link } from 'react-router-dom'
 
 
 const Home = () => {
     return (
-        <div>
+        <div className='home'>
 
             <div className="black">
                 <img src={detail} alt="" />
@@ -17,7 +18,8 @@ const Home = () => {
                     <img id="logo" src={logo}/>
                     <button onclick="" id="btn_sobre">
                         <img id="info" src={homeImage} alt="Icon Info" />
-                        <a href="sobre_nos.html">Sobre nós</a>
+                        <Link to={"About"}>Sobre nós</Link>
+                        
                     </button>
                 </div>
                 <div id="container_texts">
@@ -29,8 +31,7 @@ const Home = () => {
                                 adolescente vintage."</p>
                         </div>
                             <div className="btns_flex">
-                                <button className="btns" id="session"><a id="sessão" href="login.html">Inicie sua sessão</a></button>
-                                <button className="btns" id="create"><a href="create.html">Crie sua conta</a></button>
+                                <button className="btns" id="session"><Link id="sessão" to ={"Auth"}>Inicie sua sessão</Link></button>
                             </div>
                     </div>
                 </div>
