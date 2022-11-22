@@ -47,7 +47,9 @@ const Writer = () => {
                     <option value="trending">
                         Drama
                     </option>
-                    
+                    <option value="trending">
+                        Romance
+                    </option>
                     
                 </select>
         </div>
@@ -55,7 +57,7 @@ const Writer = () => {
             <div class="card">
                 <p class="causoo">Escreva seu causo: </p>
                 <div class="card-body">
-                    <iframe src="https://docs.google.com/document/d/13SfCFDJ7LQRJQOqkIGZ8LsQ0xEOc_uqTGg_Uj6darME/edit" style="border:1px #ffffff solid;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="600px" allowfullscreen></iframe>
+                    <iframe src="https://docs.google.com/document/d/13SfCFDJ7Lhttps://docs.google.com/document/d/13SfCFDJ7LQRJQOqkIGZ8LsQ0xEOc_uqTGg_Uj6darME/edit?usp=sharingQRJQOqkIGZ8LsQ0xEOc_uqTGg_Uj6darME/edit" style="border:1px #ffffff solid;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="600px" allowfullscreen></iframe>
 
                 </div>
 

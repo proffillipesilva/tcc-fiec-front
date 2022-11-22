@@ -1,0 +1,27 @@
+section{
+    overflow: hidden;
+    display: flex;
+}
+div img{
+    height: 200px;
+    width: 200px;
+}
+.card{
+    margin-left: 50px;
+    width: 500px;
+}
+.card-local{
+    color: black;
+}
+@media screen and (max-width: 1000px) {
+    section {
+display: block;
+
+    }
+    .card{
+        margin: 0;
+margin-top: 20px;
+width: 400px;
+font-size: 17px;
+    }
+}
