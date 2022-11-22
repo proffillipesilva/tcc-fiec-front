@@ -7,26 +7,7 @@ import logo from "../images/Logo.svg"
 const User = () => {
     return (
         <>
-            <header>
-                <input type="checkbox" name="" id="chk1" />
-                <div class="logo"><img src={logo} /></div>
-                <div class="search-box">
-                    <form>
-                        <input type="text" name="search" id="srch" placeholder="Pesquise" required />
-                        <button type="submit"><i class="fa fa-search"></i></button>
-                    </form>
-                </div>
-                <ul>
-                    <li><a href="user.html">Top causos</a></li>
-                    <li><a href="escritor.html">Crie seu causo</a></li>
-                    <li><a href="perfil.html">Meu perfil</a></li>
-                </ul>
-                <div class="menu">
-                    <label for="chk1">
-                        <i class="fa fa-bars"></i>
-                    </label>
-                </div>
-            </header>
+            
             <section>
                 <div class="container">
 

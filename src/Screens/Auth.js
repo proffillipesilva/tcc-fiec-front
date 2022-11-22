@@ -41,32 +41,13 @@ const Auth = (props) => {
         <div className="container">
         <form action="#">
             <div className="title">Login</div>
-            <div className="input-box underline">
-                <input type="text" placeholder="Digite o Email ou Usuario" required />
-                <div className="underline"></div>
-            </div>
-            <div className="input-box">
-                <input type="password" id="senha" placeholder="Digite sua senha" required />
-                <i className="uil uil-eye-slash toggle"></i>
-                <div className="underline"></div>
-            </div>
-            <div className="conectado">
-                <input  type="checkbox" name=""/><span>Mantenha-me conectado</span>
-            </div>
             <div className="conectado">
                 <input type="checkbox" name="" /><span>Entrar como revisor</span>
-            </div>
-            <div className="input-box button">
-                <input type="submit" name="" value="Continuar" />
             </div>
             <div className="google">
                 <button type="submit">Login com <img src={logoGoogle}/></button>
             </div>
         </form>
-        
-        <div className="forgot">
-            <a href="reset_senha.html">Esqueceu a senha?</a>
-        </div>
       </div>
   )
 }

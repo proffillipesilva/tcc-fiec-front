@@ -16,6 +16,8 @@ import { onMessageListener, requestForToken } from './firebase';
 import { useSelector } from 'react-redux'
 
 import Home from './Screens/Home';
+import Auth from './Screens/Auth';
+import TopCausos from './Screens/TopCausos';
 
 
 const App = () => {
@@ -58,20 +60,25 @@ const App = () => {
           <br />
         </Toast>
         
-    {loggedIn ?  <Header /> : null }
+    {!loggedIn ?  <Header /> : null }
     
   
       
     <Routes>
-    {loggedIn ? 
+    {!loggedIn ? 
       <>
       <Route path='/user-details' element={<UserDetail />} />
       <Route path='/user-form' element={<UserForm />}/>
       <Route path='/user-form/:id' element={<UserForm />} />
       <Route path='/users' element={<UsersTable />} />
+      <Route path='*' element={<TopCausos />} /> 
   
       </> :
+      
+      <>
+      <Route path='Auth' element={<Auth/>} /> 
       <Route path='*' element={<Home token={fcmToken} />} /> 
+      </> 
       }
     </Routes>
    

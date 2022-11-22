@@ -29,10 +29,11 @@ const Home = () => {
                                 gente fala</p>
                             <p id="text_2">"Não sou velha. Sou uma <br />
                                 adolescente vintage."</p>
-                        </div>
-                            <div className="btns_flex">
+                                <div className="btns_flex">
                                 <button className="btns" id="session"><Link id="sessão" to ={"Auth"}>Inicie sua sessão</Link></button>
                             </div>
+                        </div>
+                           
                     </div>
                 </div>
             </div>
