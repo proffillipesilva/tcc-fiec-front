@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { BACKEND_URL } from '../constants'
 import axiosInstance from '../myaxios'
 import './Topcausos.css'
 const TopCausos = () => {
@@ -20,14 +21,14 @@ const TopCausos = () => {
             <section>
     
 
-                { /*{
+                { 
 
                         books != null && books.length != 0 ?
                             books.map((book, i) => (
                                 <div class="card">
 
                                     <div class="card-header">
-                                        <img src="" alt="foto causo"
+                                        <img src={BACKEND_URL + "/images/" + book.profileImage} alt="foto causo"
                                             class="card-img" />
                                     </div>
 
@@ -45,7 +46,7 @@ const TopCausos = () => {
 
                                 </div>
                             ))
-                            : null}*/}   
+                            : null}   
                 
                 <div class="card">
 
