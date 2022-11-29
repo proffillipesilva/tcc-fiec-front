@@ -14,8 +14,8 @@ const Home = () => {
                 <img src={detail} alt="" />
             </div>
             <div className="all">
-                <div className="container">
-                    <img id="logo" src={logo}/>
+                <div className="container1">
+                    <img id="logo" src={logo} alt=""/>
                     <button onclick="" id="btn_sobre">
                         <img id="info" src={homeImage} alt="Icon Info" />
                         <Link to={"About"}>Sobre nós</Link>
