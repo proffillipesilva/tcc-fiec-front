@@ -25,6 +25,10 @@ jobs:
         run: |
           npm install --legacy-peer-deps
           npm run build
+          rm -Rf node_modules
+          rm -Rf src
+          rm -Rf .github
+          rm -Rf public
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
