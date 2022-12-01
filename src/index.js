@@ -15,7 +15,7 @@ const store = createStore(reducer);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <GoogleOAuthProvider clientId="609225504796-b42ba3tdkbiq6k76rlja6nsiec8bm391.apps.googleusercontent.com">
+  <GoogleOAuthProvider clientId="881000607018-9sbfo9969uv7dukobbpnn3d1plkj7jpd.apps.googleusercontent.com">
   <Provider store={store}>
   <HashRouter>
   <React.StrictMode>
