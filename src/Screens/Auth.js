@@ -17,11 +17,11 @@ const Auth = (props) => {
   const responseGoogle = async (response) => {
     console.log(response);
     const tokenId = response.credential;
-    const res = await axiosInstance.post("/auth/loginWithGoogle", { tokenId, reviewer: form.reviewer })
+    const res = await axiosInstance.post("/auth/signIn", { tokenId, reviewer: form.reviewer })
     const data = await res.data;
     const token = data.token;
     localStorage.setItem("token", token);
-    const res2 = await axiosInstance.post("/messages/register", { fcmToken: props.token })
+    //const res2 = await axiosInstance.post("/messages/register", { fcmToken: props.token })
     dispatch({ type: "LOGIN" });
   }
 
