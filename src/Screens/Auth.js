@@ -20,7 +20,8 @@ const Auth = (props) => {
     setLoading(true)
     console.log(response);
     const tokenId = response.credential;
-    const res = await axiosInstance.post("/auth/signIn", { tokenId, reviewer: form.reviewer })
+    const clientId = response.clientId;
+    const res = await axiosInstance.post("/auth/signIn", { tokenId, clientId, reviewer: form.reviewer })
     const data = await res.data;
     const token = data.token;
     localStorage.setItem("token", token);
