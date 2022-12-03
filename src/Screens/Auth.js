@@ -2,7 +2,8 @@ import React from 'react'
 import { useDispatch } from 'react-redux';
 import axiosInstance from '../myaxios';
 //import { GoogleLogin } from 'react-google-login';
-import { GoogleLogin, useGoogleLogin, useGoogleOneTapLogin } from '@react-oauth/google';
+import { GoogleLogin, useGoogleLogin } from '@react-oauth/google';
+import ClipLoader from "react-spinners/ClipLoader";
 import './login.css'
 import logoGoogle from "../images/google.svg"
 
@@ -10,17 +11,20 @@ import logoGoogle from "../images/google.svg"
 const Auth = (props) => {
   const [form, setform] = React.useState({reviewer: false})
   const [willLogin, setWillLogin] = React.useState(false)
+  const [loading, setLoading] = React.useState(false)
    
 
   const dispatch = useDispatch();
 
   const responseGoogle = async (response) => {
+    setLoading(true)
     console.log(response);
     const tokenId = response.credential;
     const res = await axiosInstance.post("/auth/signIn", { tokenId, reviewer: form.reviewer })
     const data = await res.data;
     const token = data.token;
     localStorage.setItem("token", token);
+    setLoading(false)
     //const res2 = await axiosInstance.post("/messages/register", { fcmToken: props.token })
     dispatch({ type: "LOGIN" });
   }
@@ -43,6 +47,7 @@ const Auth = (props) => {
   return (
 
     <div className="container">
+      {loading ?  <ClipLoader loading={loading}/> :
       <form action="#">
         <div className="title">Login</div>
         <div className="conectado">
@@ -53,7 +58,7 @@ const Auth = (props) => {
           <GoogleLogin onSuccess={responseGoogle} ></GoogleLogin> :
           <button onClick={login} type="submit">Login com <img alt="Google Icon" src={logoGoogle} /></button> }
         </div>
-      </form>
+      </form> }
     </div>
   )
 }

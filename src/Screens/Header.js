@@ -18,10 +18,10 @@ return (
         <input type="checkbox" name="" id="chk1"/>
         <div class="logo"><img src={Logo} alt=""/></div>
         <ul>
-            <li><a href="user.html">Top causos</a></li>
-
-            <li><a href="ilustrador.html">Meus causos</a></li>
-            <li><a href="perfil.html">Meu perfil</a></li>
+            <li><Link to={"top"}>Top causos</Link></li>
+            <li><Link to={"my"}>Meus Causos</Link></li>
+            <li><Link to={"shared"}>Livros Escritos</Link></li>
+            <li><Link to={"new"}>Criar Causo</Link></li>
         </ul>
         <div class="menu">
             <label for="chk1">

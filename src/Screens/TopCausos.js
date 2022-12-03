@@ -28,13 +28,15 @@ const TopCausos = () => {
                                 <div class="card">
 
                                     <div class="card-header">
-                                        <img src={BACKEND_URL + "/images/" + book.profileImage} alt="foto causo"
+                                        <img src={BACKEND_URL + "/images/" + book.bookImage} alt="foto causo"
                                             class="card-img" />
                                     </div>
 
                                     <div class="card-body">
-                                        <h3 class="card-local">{book.author}</h3>
-                                        <h2 class="card-titulo">{book.title}</h2>
+                                        <h3 class="card-local">{book.authorName}</h3>
+                                        <hr/>
+                                        <h2 class="card-titulo">{book.name}</h2>
+                                        <hr/>
                                         <p class="card-texto">
                                             {book.description}
                                         </p>

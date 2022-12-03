@@ -18,6 +18,9 @@ import { useSelector } from 'react-redux'
 import Home from './Screens/Home';
 import Auth from './Screens/Auth';
 import TopCausos from './Screens/TopCausos';
+import MyCausos from './Screens/MyCausos';
+import SharedCausos from './Screens/SharedCausos';
+import NovoCauso from './Screens/NovoCauso';
 
 
 const App = () => {
@@ -67,10 +70,9 @@ const App = () => {
     <Routes>
     {loggedIn ? 
       <>
-      <Route path='/user-details' element={<UserDetail />} />
-      <Route path='/user-form' element={<UserForm />}/>
-      <Route path='/user-form/:id' element={<UserForm />} />
-      <Route path='/users' element={<UsersTable />} />
+      <Route path='/my' element={ <MyCausos /> } />
+      <Route path='/shared' element={<SharedCausos />}/>
+      <Route path='/new' element={<NovoCauso />} />
       <Route path='*' element={<TopCausos />} /> 
   
       </> :
