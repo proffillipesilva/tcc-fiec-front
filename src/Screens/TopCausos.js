@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { BACKEND_URL } from '../constants'
+import { AZURE_CONTAINER_URL, BACKEND_URL } from '../constants'
 import axiosInstance from '../myaxios'
 import './Topcausos.css'
 const TopCausos = () => {
@@ -28,7 +28,7 @@ const TopCausos = () => {
                                 <div class="card">
 
                                     <div class="card-header">
-                                        <img src={BACKEND_URL + "/images/" + book.bookImage} alt="foto causo"
+                                        <img src={AZURE_CONTAINER_URL + (book.bookImage  || "undefined.png")} alt="foto causo"
                                             class="card-img" />
                                     </div>
 

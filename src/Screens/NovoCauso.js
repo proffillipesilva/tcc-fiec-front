@@ -45,7 +45,7 @@ const NovoCauso = (props) => {
         <div>
             { feedBack ? <FeedBack isOk={isOk} closeFeedBack={setfeedBack} ><div>a</div></FeedBack> : null }
             <hr />
-            <h2>{pathParam.id == null ? "Create User" : "Edit User" } </h2>
+            <h2>{pathParam.id == null ? "Cria Causo" : "Edita Causo" } </h2>
             <Form>
                 <Form.Group controlId="name-id">
                     <Form.Label>Name</Form.Label>

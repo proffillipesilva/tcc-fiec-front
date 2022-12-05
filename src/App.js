@@ -66,7 +66,7 @@ const App = () => {
     {loggedIn ?  <Header /> : null }
     
   
-      
+    <div style={{marginTop: "90px"}}>
     <Routes>
     {loggedIn ? 
       <>
@@ -84,7 +84,9 @@ const App = () => {
       }
     </Routes>
    
+   
     <Outlet />
+    </div>
   
   </div>
   )
