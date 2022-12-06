@@ -9,65 +9,65 @@ const User = () => {
         <>
             
             <section>
-                <div class="container">
+                <div className="container">
 
-                    <div class="card">
+                    <div className="card">
 
-                        <div class="card-header">
+                        <div className="card-header">
                             <img src="" alt="foto causo"
-                                class="card-img" />
+                                className="card-img" />
                         </div>
 
-                        <div class="card-body">
-                            <h3 class="card-local">Nome autor</h3>
-                            <h2 class="card-titulo">Titulo causo</h2>
-                            <p class="card-texto">
+                        <div className="card-body">
+                            <h3 className="card-local">Nome autor</h3>
+                            <h2 className="card-titulo">Titulo causo</h2>
+                            <p className="card-texto">
                                 Resumo ou primeiro paragrafo
                             </p>
                         </div>
 
-                        <div class="card-footer">
+                        <div className="card-footer">
                             <a href="#">Ver Mais</a>
                         </div>
 
                     </div>
 
-                    <div class="card">
+                    <div className="card">
 
-                        <div class="card-header">
+                        <div className="card-header">
                             <img src="" alt="Foto do causo"
-                                class="card-img" />
+                                className="card-img" />
                         </div>
 
-                        <div class="card-body">
-                            <h3 class="card-local">Nome autor</h3>
-                            <h2 class="card-titulo">Titulo causo</h2>
-                            <p class="card-texto">
+                        <div className="card-body">
+                            <h3 className="card-local">Nome autor</h3>
+                            <h2 className="card-titulo">Titulo causo</h2>
+                            <p className="card-texto">
                                 Resumo ou primeiro paragrafo
                             </p>
                         </div>
 
-                        <div class="card-footer">
+                        <div className="card-footer">
                             <a href="#">Ver Mais</a>
                         </div>
 
                     </div>
 
-                    <div class="card">
+                    <div className="card">
 
-                        <div class="card-header">
-                            <img src="" alt="foto causo" class="card-img" />
+                        <div className="card-header">
+                            <img src="" alt="foto causo" className="card-img" />
                         </div>
 
-                        <div class="card-body">
-                            <h3 class="card-local">Nome autor</h3>
-                            <h2 class="card-titulo">Titulo causo</h2>
-                            <p class="card-texto">
+                        <div className="card-body">
+                            <h3 className="card-local">Nome autor</h3>
+                            <h2 className="card-titulo">Titulo causo</h2>
+                            <p className="card-texto">
                                 Resumo ou primeiro paragrafo
                             </p>
                         </div>
 
-                        <div class="card-footer">
+                        <div className="card-footer">
                             <a href="#">Ver Mais</a>
                         </div>
                     </div>

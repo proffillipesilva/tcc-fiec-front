@@ -22,12 +22,13 @@ const Auth = (props) => {
     const tokenId = response.credential;
     const clientId = response.clientId;
     const res = await axiosInstance.post("/auth/signIn", { tokenId, clientId, reviewer: form.reviewer })
-    const data = await res.data;
-    const token = data.token;
+    const user = await res.data;
+    const token = user.token;
     localStorage.setItem("token", token);
     setLoading(false)
-    //const res2 = await axiosInstance.post("/messages/register", { fcmToken: props.token })
-    dispatch({ type: "LOGIN" });
+    const res2 = await axiosInstance.post("/messages/register", { fcmToken: props.token })
+    const fcmResp = await res2.data;
+    dispatch({ type: "LOGIN", user });
   }
 
 

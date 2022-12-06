@@ -40,6 +40,7 @@ const MyCausos = () => {
 
     const changeHandler = (e) => {
         const file = e.target.files[0];
+        console.log(file)
 
         setFile(file);
         if (file) {
@@ -68,27 +69,35 @@ const MyCausos = () => {
 
                         books != null && books.length != 0 ?
                             books.map((book, i) => (
-                                <div class="card">
+                                <div className="card">
 
-                                    <div class="card-header">
+                                    <div className="card-header">
                                         <img src={AZURE_CONTAINER_URL + (book.bookImage  || "undefined.png")} alt="foto causo"
-                                            class="card-img" />
+                                            className="card-img" />
                                     </div>
 
-                                    <div class="card-body">
-                                        <h3 class="card-local">{book.author}</h3>
-                                        <h2 class="card-titulo">{book.title}</h2>
-                                        <p class="card-texto">
+                                    <div className="card-body">
+                                        <h3 className="card-local">{book.author}</h3>
+                                        <h2 className="card-titulo">{book.title}</h2>
+                                        <p className="card-texto">
                                             {book.description}
-                                            <br />Adicionar Imagem
-                                        <input onChange={changeHandler} type="file" />
-                                        <button onClick={() => submitImageForUser(book.bookId)}>Atualizar Imagem</button>
+                                            <br />
                                         </p>
+                                        <div className='botoes' >
+                                        <label id="mycausos-label" for='imagemInput'><div style={{float: "left"}}>Seleciona Imagem </div><span>
+                                            {file?file.name:""}</span></label>
+                                        <input onChange={changeHandler} type="file" id="imagemInput" style={{display: "none"}}/>
+                                        
+                                       
+                                        </div>
+                                        
                                     </div>
 
-                                    <div class="card-footer">
-                                        <a href={"https://docs.google.com/document/d/" + book.docsBook} rel='noreferrer' target='_blank' >Ver Mais</a>
-                                        <button onClick={() => finishBook(book.bookId)} style={{float: "right"}}>Finalizar Livro</button>
+                                    <div className="card-footer">
+                                        <button><a href={"https://docs.google.com/document/d/" + book.docsBook} rel='noreferrer' target='_blank' >Editar</a></button>
+                                       
+                                        <button  onClick={() => submitImageForUser(book.bookId)}>Img Upload</button>
+                                        <button onClick={() => finishBook(book.bookId)} >Finalizar</button>
                                     </div>
 
                                 </div>

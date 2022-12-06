@@ -1,0 +1,13 @@
+#NovoCauso {
+    background-color: #333;
+    width: 500px;
+}
+
+#NovoCauso label {
+    color: white;
+}
+
+#NovoCauso h2 {
+    color: white;
+    text-align: center;
+}

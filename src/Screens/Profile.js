@@ -22,7 +22,7 @@ const Profile = () => {
                     <li><a href="perfil.html">Meu perfil</a></li>
                 </ul>
                 <div class="menu">
-                    <label for="chk1">
+                    <label htmlFor="chk1">
                         <i class="fa fa-bars"></i>
                     </label>
                 </div>

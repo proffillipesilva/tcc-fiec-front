@@ -25,22 +25,22 @@ const SharedCausos = () => {
 
                         books != null && books.length != 0 ?
                             books.map((book, i) => (
-                                <div class="card">
+                                <div className="card">
 
-                                    <div class="card-header">
+                                    <div className="card-header">
                                         <img src={AZURE_CONTAINER_URL + (book.bookImage  || "undefined.png")} alt="foto causo"
-                                            class="card-img" />
+                                            className="card-img" />
                                     </div>
 
-                                    <div class="card-body">
-                                        <h3 class="card-local">{book.author}</h3>
-                                        <h2 class="card-titulo">{book.title}</h2>
-                                        <p class="card-texto">
+                                    <div className="card-body">
+                                        <h3 className="card-local">{book.author}</h3>
+                                        <h2 className="card-titulo">{book.title}</h2>
+                                        <p className="card-texto">
                                             {book.description}
                                         </p>
                                     </div>
 
-                                    <div class="card-footer">
+                                    <div className="card-footer">
                                         <a href={"https://docs.google.com/document/d/" + book.docsBook} rel='noreferrer' target='_blank' >Ver Mais</a>
                                     </div>
 

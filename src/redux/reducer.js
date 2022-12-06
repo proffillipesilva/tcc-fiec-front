@@ -1,7 +1,7 @@
 const initialState = {
     count: 0,
     selectedProducts: [],
-    loggedIn: false
+    user: null
 };
 
 export default function globalReducer (state = initialState, action) {
@@ -18,7 +18,7 @@ export default function globalReducer (state = initialState, action) {
             productCopy.splice(idx, 1);
             return { ...state, selectedProducts: productCopy }
         case "LOGIN":
-            return { ...state, loggedIn:true }
+            return { ...state, user: action.user }
         default:
             return state;
     }

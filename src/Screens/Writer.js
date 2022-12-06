@@ -8,11 +8,11 @@ const Writer = () => {
         <>
         <header>
         <input type="checkbox" name="" id="chk1"/>
-        <div class="logo"><a href="user.html"rel="noopener noreferrer"><img src={logo} alt=""/></a></div>
-        <div class="search-box">
+        <div className="logo"><a href="user.html"rel="noopener noreferrer"><img src={logo} alt=""/></a></div>
+        <div className="search-box">
             <form>
                 <input type="text" name="search" id="srch" placeholder="Pesquise" required/>
-                <button type="submit"><i class="fa fa-search"></i></button>
+                <button type="submit"><i className="fa fa-search"></i></button>
             </form>
         </div>
         <ul>
@@ -21,14 +21,14 @@ const Writer = () => {
             <li><a href="ilustrador.html">Poste sua ilustração</a></li>
             <li><a href="perfil.html">Meu perfil</a></li>
         </ul>
-        <div class="menu">
-            <label for="chk1">
-                <i class="fa fa-bars"></i>
+        <div className="menu">
+            <label htmlFor="chk1">
+                <i className="fa fa-bars"></i>
             </label>
         </div>
     </header>
     <section>
-        <div class="genro">
+        <div className="genro">
             
 
                 <select id="select_genro" >
@@ -53,10 +53,10 @@ const Writer = () => {
                     
                 </select>
         </div>
-        <div class="container"> 
-            <div class="card">
-                <p class="causoo">Escreva seu causo: </p>
-                <div class="card-body">
+        <div className="container"> 
+            <div className="card">
+                <p className="causoo">Escreva seu causo: </p>
+                <div className="card-body">
                     <iframe src="https://docs.google.com/document/d/13SfCFDJ7Lhttps://docs.google.com/document/d/13SfCFDJ7LQRJQOqkIGZ8LsQ0xEOc_uqTGg_Uj6darME/edit?usp=sharingQRJQOqkIGZ8LsQ0xEOc_uqTGg_Uj6darME/edit" style="border:1px #ffffff solid;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="600px" allowfullscreen></iframe>
 
                 </div>
@@ -65,12 +65,12 @@ const Writer = () => {
             </div>
             </div>
     </section>
-    <div class="idade">
+    <div className="idade">
         
             
             <select id="pega_idade" >
                 <option value="scoredesc" selected="selected">
-                    Classif. Etária
+                    classNameif. Etária
                 </option>
                 <option value="trending">
                     Livre
@@ -91,7 +91,7 @@ const Writer = () => {
                 
             </select>
     </div>
-    <button class="botao_enviar" type="submit">Enviar</button>
+    <button className="botao_enviar" type="submit">Enviar</button>
     </>
 )
 }

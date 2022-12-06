@@ -1,26 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
 
-body{
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    background-color: #C2A78C;
-    overflow: hidden;
-}
-a{
-    font-family:'Bree Serif',sans-serif;
-    text-decoration: none;
-    color:white
-}
-.black /*capeta de fundo preto */{
-    position: absolute;
-    z-index: -1;
-    width: 30%;
-    background-color: black;
-    height: 100%;
-}
-.container{
+
+
+.aboutUsContainer{
     margin-top: 3rem;
     width: 30%;
     display: flex;
@@ -144,7 +126,7 @@ a{
     }
 }
 @media(max-width:750px){
-    .container{
+    .aboutUsContainer{
         width: 70%;
     }
     .black{

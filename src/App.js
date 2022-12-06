@@ -21,6 +21,7 @@ import TopCausos from './Screens/TopCausos';
 import MyCausos from './Screens/MyCausos';
 import SharedCausos from './Screens/SharedCausos';
 import NovoCauso from './Screens/NovoCauso';
+import AboutUs from './Screens/AboutUs';
 
 
 const App = () => {
@@ -41,7 +42,7 @@ const App = () => {
   }).catch(err => console.log('failed: ', err));
   
 
-  const loggedIn = useSelector(state => state.loggedIn);
+  const userLoggedIn = useSelector(state => state.user);
 
   return (  // retorna a  pagina ou porção que serah mostrada
   <div>
@@ -63,12 +64,12 @@ const App = () => {
           <br />
         </Toast>
         
-    {loggedIn ?  <Header /> : null }
+    {userLoggedIn != null ?  <Header user={userLoggedIn} /> : null }
     
   
     <div style={{marginTop: "90px"}}>
     <Routes>
-    {loggedIn ? 
+    {userLoggedIn != null ? 
       <>
       <Route path='/my' element={ <MyCausos /> } />
       <Route path='/shared' element={<SharedCausos />}/>
@@ -78,7 +79,8 @@ const App = () => {
       </> :
       
       <>
-      <Route path='/auth' element={<Auth/>} /> 
+      <Route path='/auth' element={<Auth token={fcmToken}/>} /> 
+      <Route path='/about' element={<AboutUs/>} /> 
       <Route path='*' element={<Home token={fcmToken} />} /> 
       </> 
       }

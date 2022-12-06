@@ -3,6 +3,7 @@ import { Form, Button } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import FeedBack from '../Layouts/FeedBack';
 import axiosInstance from '../myaxios';
+import "./NovoCauso.css"
 
 const NovoCauso = (props) => {
 
@@ -42,7 +43,7 @@ const NovoCauso = (props) => {
 
 
     return (
-        <div>
+        <div id="NovoCauso">
             { feedBack ? <FeedBack isOk={isOk} closeFeedBack={setfeedBack} ><div>a</div></FeedBack> : null }
             <hr />
             <h2>{pathParam.id == null ? "Cria Causo" : "Edita Causo" } </h2>

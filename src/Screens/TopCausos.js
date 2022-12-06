@@ -17,103 +17,100 @@ const TopCausos = () => {
 
     return (
         <>
-
             <section>
-    
-
                 { 
 
-                        books != null && books.length != 0 ?
+                        books != null && books.length !== 0 ?
                             books.map((book, i) => (
-                                <div class="card">
+                                <div className="card">
 
-                                    <div class="card-header">
+                                    <div className="card-header">
                                         <img src={AZURE_CONTAINER_URL + (book.bookImage  || "undefined.png")} alt="foto causo"
-                                            class="card-img" />
+                                            className="card-img" />
                                     </div>
 
-                                    <div class="card-body">
-                                        <h3 class="card-local">{book.authorName}</h3>
+                                    <div className="card-body">
+                                        <h3 className="card-local">{book.authorName}</h3>
                                         <hr/>
-                                        <h2 class="card-titulo">{book.name}</h2>
+                                        <h2 className="card-titulo">{book.name}</h2>
                                         <hr/>
-                                        <p class="card-texto">
+                                        <p className="card-texto">
                                             {book.description}
                                         </p>
                                     </div>
 
-                                    <div class="card-footer">
-                                        <a href={"https://docs.google.com/document/d/" + book.docsBook} rel='noreferrer' target='_blank' >Ver Mais</a>
+                                    <div className="card-footer">
+                                        <a href={"https://docs.google.com/document/d/" + book.docsBook} rel='noreferrer' target='_blank' >Ler Historia</a>
                                     </div>
 
                                 </div>
                             ))
                             : null}   
                 
-                <div class="card">
+                <div className="card">
 
-                    <div class="card-header">
+                    <div className="card-header">
                         <img src={"https://st2.depositphotos.com/5526774/8104/v/450/depositphotos_81046160-stock-illustration-strawberry.jpg"} alt="foto causo"
-                            class="card-img" />
+                            className="card-img" />
                     </div>
 
-                    <div class="card-body">
-                        <h3 class="card-local">Autor: Vulgo Pietrin</h3>
+                    <div className="card-body">
+                        <h3 className="card-local">Autor: Vulgo Pietrin</h3>
                         <hr/>
-                        <h2 class="card-titulo">Titúlo: A vida é um morango</h2>
+                        <h2 className="card-titulo">Titúlo: A vida é um morango</h2>
                         <hr/>
-                        <p class="card-texto">
+                        <p className="card-texto">
                             Descrição: Causo com o intuito de retratar porque a vida é um morango
                         </p>
                     </div>
 
-                    <div class="card-footer">
-                        <a href={"https://docs.google.com/document/d/13SfCFDJ7LQRJQOqkIGZ8LsQ0xEOc_uqTGg_Uj6darME"} rel='noreferrer' target='_blank' >Ver Mais</a>
+                    <div className="card-footer">
+                        <a href={"https://docs.google.com/document/d/13SfCFDJ7LQRJQOqkIGZ8LsQ0xEOc_uqTGg_Uj6darME"} rel='noreferrer' target='_blank' >Ler Historia</a>
                     </div>
 
                 </div>
-                <div class="card">
+                <div className="card">
 
-                    <div class="card-header">
+                    <div className="card-header">
                         <img src={"https://cdn.discordapp.com/attachments/1044656533650284584/1044663424447152168/unknown.png"}
-                            class="card-img" />
+                            className="card-img"  alt=''/>
                     </div>
 
-                    <div class="card-body">
-                        <h3 class="card-local">Autor: Kn maverick</h3>
+                    <div className="card-body">
+                        <h3 className="card-local">Autor: Kn maverick</h3>
                         <hr/>
-                        <h2 class="card-titulo">Titúlo: Um dia de pesca</h2>
+                        <h2 className="card-titulo">Titúlo: Um dia de pesca</h2>
                         <hr/>
-                        <p class="card-texto">
+                        <p className="card-texto">
                             Descrição:
                             Não entre no rio, se você não consegue ver o fundo dele
                         </p>
                     </div>
 
-                    <div class="card-footer">
+                    <div className="card-footer">
                         <a href={"https://docs.google.com/document/d/1GYBM6x49sTvcqY0tiEjTD5St8moFpntl9uZIFcTohes"} rel='noreferrer' target='_blank' >Ver Mais</a>
                     </div>
 
                 </div>
-                <div class="card">
+                <div className="card">
 
-                    <div class="card-header">
+                    <div className="card-header">
                         <img src={"https://www.visaonoticias.com/images/noticias/0115075001586804067.jpg"}
-                            class="card-img" />
+                            className="card-img" alt='' />
                     </div>
 
-                    <div class="card-body">
-                        <h3 class="card-local">Autor: Fondolhaca</h3>
+                    <div className="card-body">
+                        <h3 className="card-local">Autor: Fondolhaca</h3>
                         <hr/>
-                        <h2 class="card-titulo">Titúlo: Loucuras no boteco</h2>
+                        <h2 className="card-titulo">Titúlo: Loucuras no boteco</h2>
                         <hr/>
-                        <p class="card-texto">
+                        <p className="card-texto">
                             Descrição:
                             Nunca beba do copo de um estranho
                         </p>
                     </div>
 
-                    <div class="card-footer">
+                    <div className="card-footer">
                         <a href={"https://docs.google.com/document/d/1pgX3C5pYFYQtsM-pkpW6ZfjdZ3cY-68i44f2gh_DD74"} rel='noreferrer' target='_blank' >Ver Mais</a>
                     </div>
 
