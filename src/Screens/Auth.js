@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch } from 'react-redux';
 import axiosInstance from '../myaxios';
 //import { GoogleLogin } from 'react-google-login';
-import { GoogleLogin, useGoogleLogin } from '@react-oauth/google';
+import { GoogleLogin } from '@react-oauth/google';
 import ClipLoader from "react-spinners/ClipLoader";
 import './login.css'
 import logoGoogle from "../images/google.svg"
@@ -18,24 +18,25 @@ const Auth = (props) => {
 
   const responseGoogle = async (response) => {
     setLoading(true)
-    console.log(response);
-    const tokenId = response.credential;
-    const clientId = response.clientId;
-    const res = await axiosInstance.post("/auth/signIn", { tokenId, clientId, reviewer: form.reviewer })
-    const user = await res.data;
-    const token = user.token;
-    localStorage.setItem("token", token);
-    setLoading(false)
-    const res2 = await axiosInstance.post("/messages/register", { fcmToken: props.token })
-    const fcmResp = await res2.data;
-    dispatch({ type: "LOGIN", user });
+    
+    try{console.log(response);
+      const tokenId = response.credential;
+      const clientId = response.clientId;
+      const res = await axiosInstance.post("/auth/signIn", { tokenId, clientId, reviewer: form.reviewer })
+      const user = await res.data;
+      const token = user.token;
+      localStorage.setItem("token", token);
+      const res2 = await axiosInstance.post("/messages/register", { fcmToken: props.token })
+      await res2.data;
+      dispatch({ type: "LOGIN", user });
+    } finally {
+      setLoading(false);
+    }
+    
   }
 
 
-  const googleLogin = useGoogleLogin({
-    onSuccess: credentialResponse => responseGoogle(credentialResponse),
-    
-  });
+
 
   const handleChange = e => {
     setform({...form, [e.target.name]: e.target.checked})

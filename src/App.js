@@ -1,13 +1,7 @@
 import React, {useState, useEffect} from 'react'
-import axiosInstance from './myaxios'
 import { Button } from 'react-bootstrap';
-import { Container, Toast } from 'react-bootstrap';
-import UserProfile from './Layouts/UserProfile';
-import UserDetail from './Screens/UserDetail';
-import UserForm from './Screens/UserForm';
-import UsersTable from './Screens/UsersTable';
+import { Toast } from 'react-bootstrap';
 import {Route, Routes, Outlet} from 'react-router-dom';
-import Users from './Screens/UserDetail';
 import Header from './Screens/Header';
 
 
@@ -46,7 +40,7 @@ const App = () => {
 
   return (  // retorna a  pagina ou porção que serah mostrada
   <div>
-     <Toast onClose={() => setShow(fcmToken && fcmToken.notification)} show={show} delay={3000} autohide animation style={{
+     <Toast onClose={() => setShow(isTokenFound && fcmToken && fcmToken.notification)} show={show} delay={3000} autohide animation style={{
           position: 'absolute',
           top: 20,
           right: 20,

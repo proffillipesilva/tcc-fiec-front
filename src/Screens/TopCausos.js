@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { FormattedMessage } from 'react-intl'
 import { Link } from 'react-router-dom'
 import { AZURE_CONTAINER_URL, BACKEND_URL } from '../constants'
 import axiosInstance from '../myaxios'
@@ -40,7 +41,8 @@ const TopCausos = () => {
                                     </div>
 
                                     <div className="card-footer">
-                                        <a href={"https://docs.google.com/document/d/" + book.docsBook} rel='noreferrer' target='_blank' >Ler Historia</a>
+                                        <a href={"https://docs.google.com/document/d/" + book.docsBook} rel='noreferrer' target='_blank' >
+                                            <FormattedMessage id="readStory" /></a>
                                     </div>
 
                                 </div>

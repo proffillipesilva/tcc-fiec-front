@@ -3,13 +3,15 @@ import { Nav, Navbar, Offcanvas, Button, Form } from 'react-bootstrap';
 import {Link, NavLink } from 'react-router-dom';
 import './Header.css' 
 import Logo from '../images/Logo.svg'
+
+import { useTranslation, Trans } from "react-i18next";
+import { FormattedMessage } from 'react-intl';
+
+  
+
 const Header = (props) => {
     
-
-const [show, setShow] = useState(false);
-
-const handleClose = () => setShow(false);
-const handleShow = () => setShow(true);
+  const { t, i18n } = useTranslation("other/ns");
 
 return (
   <>
@@ -18,10 +20,10 @@ return (
         <input type="checkbox" name="" id="chk1"/>
         <div className="logo"><img src={Logo} alt=""/></div>
         <ul>
-            <li><Link to={"top"}>Top causos</Link></li>
-            <li><Link to={"my"}>Meus Causos</Link></li>
-            <li><Link to={"shared"}>Livros Escritos</Link></li>
-            <li><Link to={"new"}>Criar Causo</Link></li>
+            <li><Link to={"top"}><FormattedMessage id="topStories" /></Link></li>
+            <li><Link to={"my"}><FormattedMessage id="myStories" /></Link></li>
+            <li><Link to={"shared"}><FormattedMessage id="sharedStories" /></Link></li>
+            <li><Link to={"new"}><FormattedMessage id="createStory" /></Link></li>
             
         </ul>
         <div id="profile" ><Link to={"new"}><img src={props.user.profileImage} alt="" /><span>{props.user.name?.split(" ")[0]}</span></Link></div>

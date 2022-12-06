@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { FormattedMessage } from 'react-intl'
 import { Link } from 'react-router-dom'
 import { AZURE_CONTAINER_URL, BACKEND_URL } from '../constants'
 import axiosInstance from '../myaxios'
@@ -94,10 +95,12 @@ const MyCausos = () => {
                                     </div>
 
                                     <div className="card-footer">
-                                        <button><a href={"https://docs.google.com/document/d/" + book.docsBook} rel='noreferrer' target='_blank' >Editar</a></button>
+                                        <button><a href={"https://docs.google.com/document/d/" + book.docsBook} rel='noreferrer' target='_blank' >
+                                            <FormattedMessage id="editStory" />
+                                            </a></button>
                                        
-                                        <button  onClick={() => submitImageForUser(book.bookId)}>Img Upload</button>
-                                        <button onClick={() => finishBook(book.bookId)} >Finalizar</button>
+                                        <button  onClick={() => submitImageForUser(book.bookId)}><FormattedMessage id="imgUpload" /></button>
+                                        <button onClick={() => finishBook(book.bookId)} ><FormattedMessage id="finishBook" /></button>
                                     </div>
 
                                 </div>

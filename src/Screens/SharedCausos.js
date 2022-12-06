@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { FormattedMessage } from 'react-intl'
 import { Link } from 'react-router-dom'
 import { AZURE_CONTAINER_URL, BACKEND_URL } from '../constants'
 import axiosInstance from '../myaxios'
@@ -19,11 +20,8 @@ const SharedCausos = () => {
         <>
 
             <section>
-    
-
                 { 
-
-                        books != null && books.length != 0 ?
+                        books != null && books.length !== 0 ?
                             books.map((book, i) => (
                                 <div className="card">
 
@@ -41,7 +39,12 @@ const SharedCausos = () => {
                                     </div>
 
                                     <div className="card-footer">
-                                        <a href={"https://docs.google.com/document/d/" + book.docsBook} rel='noreferrer' target='_blank' >Ver Mais</a>
+                                        <center>
+                                            <a href={"https://docs.google.com/document/d/" + book.docsBook} rel='noreferrer' target='_blank' >
+                                                <FormattedMessage id="sharedEdit" />
+
+                                            </a>
+                                        </center>
                                     </div>
 
                                 </div>

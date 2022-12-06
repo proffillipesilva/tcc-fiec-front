@@ -9,13 +9,18 @@ import { createStore} from 'redux';
 import reducer from './redux/reducer';
 import { Provider } from 'react-redux';
 import { GoogleOAuthProvider } from '@react-oauth/google';
+import { useIntl } from 'react-intl';
+import { addLocaleData, IntlProvider } from 'react-intl'
+import { flattenMessages } from './internationalization/utils'
+import messages from './internationalization/messages'
 
 const store = createStore(reducer);
-
+let locale = navigator.language;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <GoogleOAuthProvider clientId="609225504796-b42ba3tdkbiq6k76rlja6nsiec8bm391.apps.googleusercontent.com">
+    <IntlProvider locale={locale} messages={flattenMessages(messages[locale])}>
   <Provider store={store}>
   <HashRouter>
   <React.StrictMode>
@@ -23,6 +28,7 @@ root.render(
   </React.StrictMode>
   </HashRouter>
   </Provider>
+  </IntlProvider>
   </GoogleOAuthProvider>
 );
 
