@@ -13,10 +13,10 @@
     align-items: center;
     justify-content: center;
 }
-form{
+#Auth form{
     padding: 5rem;
 }
-form > *{
+#Auth form > *{
     font-size: 24px;
 }
 html,

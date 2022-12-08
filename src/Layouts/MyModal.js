@@ -8,7 +8,7 @@ const MyModal = (props) => {
         <Modal.Title>{props.title}</Modal.Title>
     </Modal.Header>
     <Modal.Body>
-        <p>{props.children}</p>
+        <div>{props.children}</div>
     </Modal.Body>
     <Modal.Footer>
         

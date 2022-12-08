@@ -49,7 +49,7 @@ const Auth = (props) => {
   }
   return (
 
-    <div className="container">
+    <div className="container" id="Auth">
       {loading ?  <ClipLoader loading={loading}/> :
       <form action="#">
         <div className="title">Login</div>

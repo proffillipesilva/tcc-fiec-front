@@ -4,14 +4,12 @@ import {Link, NavLink } from 'react-router-dom';
 import './Header.css' 
 import Logo from '../images/Logo.svg'
 
-import { useTranslation, Trans } from "react-i18next";
 import { FormattedMessage } from 'react-intl';
 
   
 
 const Header = (props) => {
     
-  const { t, i18n } = useTranslation("other/ns");
 
 return (
   <>

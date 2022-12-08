@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { HashRouter, BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { createStore} from 'redux';
 
 import reducer from './redux/reducer';
