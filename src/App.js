@@ -16,6 +16,7 @@ import MyCausos from './Screens/MyCausos';
 import SharedCausos from './Screens/SharedCausos';
 import NovoCauso from './Screens/NovoCauso';
 import AboutUs from './Screens/AboutUs';
+import './firebase'
 
 
 const App = () => {
@@ -40,10 +41,11 @@ const App = () => {
 
   return (  // retorna a  pagina ou porção que serah mostrada
   <div>
-     <Toast onClose={() => setShow(isTokenFound && fcmToken && fcmToken.notification)} show={show} delay={3000} autohide animation style={{
+     <Toast onClose={() => setShow(false)} show={show} delay={3000} autohide animation style={{
           position: 'absolute',
           top: 20,
           right: 20,
+          zIndex: 200
         }}>
           <Toast.Header>
             <img
@@ -54,7 +56,7 @@ const App = () => {
             <strong className="mr-auto">{notification && notification.title}</strong>
           </Toast.Header>
           <Toast.Body>{notification && notification.body}</Toast.Body>
-          <Button onClick={() => setShow(false)}>Close Notification</Button>
+          <center><Button onClick={() => setShow(false)}>Close Notification</Button></center>
           <br />
         </Toast>
         

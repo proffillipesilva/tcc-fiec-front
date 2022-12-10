@@ -23,7 +23,7 @@ const SharedCausos = () => {
                 { 
                         books != null && books.length !== 0 ?
                             books.map((book, i) => (
-                                <div className="card">
+                                <div className="card" key={i}>
 
                                     <div className="card-header">
                                         <img src={AZURE_CONTAINER_URL + (book.bookImage  || "undefined.png")} alt="foto causo"

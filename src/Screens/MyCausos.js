@@ -73,6 +73,8 @@ const MyCausos = () => {
             } catch(ex) {
                 console.log(ex)
             }
+            setshowModal(false)
+            loadBooks();
         
     }
     
@@ -100,6 +102,8 @@ const MyCausos = () => {
 
     const openModal = (book) => {
         selectBook(book);
+        setWriterFound(null);
+        setemailSearch(null);
         setshowModal(true);
     }
       const closeModal = () => {
@@ -159,9 +163,9 @@ const MyCausos = () => {
 
                 { 
 
-                        books != null && books.length != 0 ?
+                        books != null && books.length !== 0 ?
                             books.map((book, i) => (
-                                <div className="card">
+                                <div className="card" key={i}>
 
                                     <div className="card-header">
                                         <img src={AZURE_CONTAINER_URL + (book.bookImage  || "undefined.png")} alt="foto causo"
