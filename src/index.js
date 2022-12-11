@@ -18,7 +18,7 @@ let locale = navigator.language;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <GoogleOAuthProvider clientId="609225504796-b42ba3tdkbiq6k76rlja6nsiec8bm391.apps.googleusercontent.com">
+  <GoogleOAuthProvider clientId="377869314621-7mu6efqci9ki98qmega0m2nqdt0ji15h.apps.googleusercontent.com">
     <IntlProvider locale={locale} messages={flattenMessages(messages[locale])}>
   <Provider store={store}>
   <HashRouter>

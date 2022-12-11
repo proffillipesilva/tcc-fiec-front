@@ -7,7 +7,7 @@ import {getMessaging, getToken, onMessage} from 'firebase/messaging'
 // https://firebase.google.com/docs/web/setup#config-object
 
 const firebaseConfig = {
-    apiKey: process.env.REACT_APP_APIKEY,
+    apiKey: "AIzaSyDoTRW7E48ru-AuukI2dwfbcu9jt2wM_0g",
     authDomain: "historinhas-18386.firebaseapp.com",
     projectId: "historinhas-18386",
     storageBucket: "historinhas-18386.appspot.com",
