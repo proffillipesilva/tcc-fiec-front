@@ -9,8 +9,7 @@ import { createStore} from 'redux';
 import reducer from './redux/reducer';
 import { Provider } from 'react-redux';
 import { GoogleOAuthProvider } from '@react-oauth/google';
-import { useIntl } from 'react-intl';
-import { addLocaleData, IntlProvider } from 'react-intl'
+import { IntlProvider } from 'react-intl'
 import { flattenMessages } from './internationalization/utils'
 import messages from './internationalization/messages'
 

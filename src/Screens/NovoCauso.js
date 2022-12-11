@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Form, Button } from 'react-bootstrap';
 import { FormattedMessage } from 'react-intl';
-import { useParams } from 'react-router-dom';
 import FeedBack from '../Layouts/FeedBack';
 import axiosInstance from '../myaxios';
 import "./NovoCauso.css"
@@ -11,8 +10,6 @@ const NovoCauso = (props) => {
     const [feedBack, setfeedBack] = useState(false)
     const [isOk, setIsOk] = useState(false);
 
-    const pathParam = useParams("id");
-    const [user, setUser] = useState(null);
 
     const [form, setForm] = useState({ name: '', description: '', genre: '', authorName: '' })
     const updateForm = (e) => {
@@ -27,7 +24,7 @@ const NovoCauso = (props) => {
            
                 const res = await axiosInstance.post(`/reviewers/createBook`, form);
              
-                const data = await res.data;
+                await res.data;
                 setfeedBack(true);
                 setIsOk(true);
                 setTimeout(() => setfeedBack(false), 1000);
@@ -39,9 +36,6 @@ const NovoCauso = (props) => {
         }
     }
     
-
-
-
 
     return (
         <div id="NovoCauso">

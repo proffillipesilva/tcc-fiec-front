@@ -27,6 +27,7 @@ const App = () => {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
+    console.log(isTokenFound)
     requestForToken(setTokenFound, setToken)
   }, [])
 

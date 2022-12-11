@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import { FormattedMessage } from 'react-intl'
+import ClipLoader from "react-spinners/ClipLoader";
 import MyModal from '../Layouts/MyModal'
 
-import { AZURE_CONTAINER_URL, BACKEND_URL } from '../constants'
+import { AZURE_CONTAINER_URL } from '../constants'
 import axiosInstance from '../myaxios'
 import './Topcausos.css'
 import { Button, Col, Form, Row } from 'react-bootstrap'
 const MyCausos = () => {
     const [books, setbooks] = useState(null)
+    const [loading, setLoading] = useState(null);
+    const [bookLoading, setBookLoading] = useState([]);
     const [selectedBook, selectBook] = useState(null)
     const [showModal, setshowModal] = useState(false)
     const [emailSearch, setemailSearch] = useState(null)
@@ -23,38 +26,57 @@ const MyCausos = () => {
     const [fileDataURL, setFileDataURL] = useState(null);
 
     const loadBooks = async () => {
+        setLoading(true);
+        try {
         const res = await axiosInstance.get("/books/reviewer")
         const data = await res.data;
         setbooks(data);
-    }
-
-
-    const submitImageForUser = async (id) => {
-        try {
-            const formData = new FormData();
-            formData.append("image", file);
-            const res = await axiosInstance.put(`/books/${id}`, formData);
-            const user = await res.data;
-
-        } catch (ex) {
-
+        for(let i=0; i<books.length; i++) setBookLoading[i] = false;
+        } finally  {
+            setLoading(false);
         }
     }
 
-    const finishBook = async (id) => {
+
+    const submitImageForUser = async (id, i) => {
         try {
-            
-            const res = await axiosInstance.put(`/reviewers/finishBook/${id}`);
-            const user = await res.data;
+            const bookLoaded = [...bookLoading];
+            bookLoaded[i] = true;
+            setBookLoading(bookLoaded)
+            const formData = new FormData();
+            formData.append("image", file);
+            const res = await axiosInstance.put(`/books/${id}`, formData);
+            await res.data;
 
         } catch (ex) {
 
+        } finally  {
+            const bookLoaded = [...bookLoading];
+            bookLoaded[i] = false;
+            setBookLoading(bookLoaded)
+        }
+        
+    }
+
+    const finishBook = async (id, i) => {
+        try {
+            const bookLoaded = [...bookLoading];
+            bookLoaded[i] = true;
+            setBookLoading(bookLoaded)
+            const res = await axiosInstance.put(`/reviewers/finishBook/${id}`);
+            await res.data;
+
+        } finally  {
+            const bookLoaded = [...bookLoading];
+            bookLoaded[i] = false;
+            setBookLoading(bookLoaded)
         }
     }
 
     const searchAuthor = async (e) => {
         e.preventDefault();
         try{
+            
         const res = await axiosInstance.post("/writers/find", {email: emailSearch})
         const writer = await res.data;
         setWriterFound(writer);
@@ -158,6 +180,8 @@ const MyCausos = () => {
          </table>
          </div>
         </MyModal>
+
+        {loading ? <ClipLoader /> :
             <section>
     
 
@@ -166,7 +190,8 @@ const MyCausos = () => {
                         books != null && books.length !== 0 ?
                             books.map((book, i) => (
                                 <div className="card" key={i}>
-
+                                    {bookLoading != null && bookLoading[i] ? <div style={{textAlign: "center", paddingTop: "50%"}} ><ClipLoader /> </div>:
+                                    <>
                                     <div className="card-header">
                                         <img src={AZURE_CONTAINER_URL + (book.bookImage  || "undefined.png")} alt="foto causo"
                                             className="card-img" />
@@ -174,7 +199,7 @@ const MyCausos = () => {
 
                                     <div className="card-body">
                                         <h3 className="card-local">{book.authorName} <span onClick={() => openModal(book)} style={{float: "right", fontSize: "16px"}}>+ Autores</span></h3>
-                                        <h2 className="card-titulo">{book.title}</h2>
+                                        <h2 className="card-titulo">{book.name}</h2>
                                         <p className="card-texto">
                                             {book.description}
                                             <br />
@@ -194,9 +219,11 @@ const MyCausos = () => {
                                             <FormattedMessage id="editStory" />
                                             </a></button>
                                        
-                                        <button  onClick={() => submitImageForUser(book.bookId)}><FormattedMessage id="imgUpload" /></button>
-                                        <button onClick={() => finishBook(book.bookId)} ><FormattedMessage id="finishBook" /></button>
+                                        <button  onClick={() => submitImageForUser(book.bookId, i)}><FormattedMessage id="imgUpload" /></button>
+                                        <button onClick={() => finishBook(book.bookId, i)} ><FormattedMessage id="finishBook" /></button>
                                     </div>
+                                    </>
+                                    }
 
                                 </div>
                             ))
@@ -204,6 +231,7 @@ const MyCausos = () => {
                 
                 
             </section>
+            }
         </>
 
     )

@@ -1,15 +1,21 @@
 import React, { useState, useEffect } from 'react'
 import { FormattedMessage } from 'react-intl'
-import { Link } from 'react-router-dom'
-import { AZURE_CONTAINER_URL, BACKEND_URL } from '../constants'
+import { AZURE_CONTAINER_URL } from '../constants'
+import ClipLoader from "react-spinners/ClipLoader";
 import axiosInstance from '../myaxios'
 import './Topcausos.css'
 const TopCausos = () => {
+    const [loading, setLoading] = useState(null);
     const [books, setbooks] = useState(null)
     const loadBooks = async () => {
+        try{
+            setLoading(true)
         const res = await axiosInstance.get("/books")
         const data = await res.data;
         setbooks(data);
+        } finally {
+            setLoading(false)
+        }
     }
 
     useEffect(() => {
@@ -18,6 +24,7 @@ const TopCausos = () => {
 
     return (
         <>
+        {loading ? <ClipLoader /> :
             <section>
                 { 
 
@@ -118,6 +125,7 @@ const TopCausos = () => {
 
                 </div>
             </section>
+            }
         </>
 
     )

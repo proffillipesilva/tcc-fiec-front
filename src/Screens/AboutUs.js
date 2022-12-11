@@ -12,9 +12,9 @@ const AboutUs = () => {
     </div>
     <div className="all">
         <div className="aboutUsContainer">
-            <img id="logo" src={logo}/>
+            <img id="logo" src={logo} alt="logo"/>
             <button id="btn_sobre">
-                <img id="info" src={homeImage}/>
+                <img id="info" src={homeImage} alt="nfo"/>
                 <a href="home.html">Sobre nós</a>
             </button>
             <div className="about" id="text_about">

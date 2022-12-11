@@ -1,6 +1,7 @@
 #NovoCauso {
     background-color: #333;
     width: 500px;
+    padding: 50px;
 }
 
 #NovoCauso label {
@@ -10,4 +11,12 @@
 #NovoCauso h2 {
     color: white;
     text-align: center;
+}
+
+@media only screen and (width < 500px) {
+    #NovoCauso {
+        background-color: #333;
+        width: 80vw;
+        padding: 8vw;
+    }
 }

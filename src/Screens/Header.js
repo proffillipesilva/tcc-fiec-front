@@ -1,6 +1,5 @@
-import React, {useState} from 'react'
-import { Nav, Navbar, Offcanvas, Button, Form } from 'react-bootstrap';
-import {Link, NavLink } from 'react-router-dom';
+import React from 'react'
+import {Link } from 'react-router-dom';
 import './Header.css' 
 import Logo from '../images/Logo.svg'
 

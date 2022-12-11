@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react'
-import { Container, Alert, Button } from 'react-bootstrap';
+import React, {useEffect} from 'react'
+import { Container } from 'react-bootstrap';
 import { CSSTransition } from 'react-transition-group';
 import okGif from '../images/check-green.gif';
 import nokGif from '../images/cancel-red.gif'
@@ -22,7 +22,7 @@ const FeedBack = (props) => {
         onExited={props.onExitFeedBack}
       >
         <div>
-            <img src={props.isOk ? okGif : nokGif} width={300} height={300} />    
+            <img src={props.isOk ? okGif : nokGif} width={300} height={300} alt=''/>    
         </div>
        
       </CSSTransition>
