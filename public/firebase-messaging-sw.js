@@ -22,13 +22,13 @@ firebase.initializeApp({
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDvRwjQ3YDr46M3ErwNL1GqDEuibEm8ycs",
-    authDomain: "tcc-fiec-3mod.firebaseapp.com",
-    projectId: "tcc-fiec-3mod",
-    storageBucket: "tcc-fiec-3mod.appspot.com",
-    messagingSenderId: "609225504796",
-    appId: "1:609225504796:web:24bc1d46582826a7a347d9",
-    measurementId: "G-80M0C3ZNBT"
+    apiKey: "AIzaSyDoTRW7E48ru-AuukI2dwfbcu9jt2wM_0g",
+    authDomain: "historinhas-18386.firebaseapp.com",
+    projectId: "historinhas-18386",
+    storageBucket: "historinhas-18386.appspot.com",
+    messagingSenderId: "377869314621",
+    appId: "1:377869314621:web:58ffe37b10a901514d9854",
+    measurementId: "G-G9REXF7HZK"
   };
 firebase.initializeApp(firebaseConfig);
 

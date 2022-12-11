@@ -12,7 +12,7 @@ const ResetPassword = () => {
                 <div class="underline"></div>
             </div>
             <div class="input-box button">
-                <input onclick="java()" class="toggle" type="submit" name="" value="Enviar"/>
+                <input class="toggle" type="submit" name="" value="Enviar"/>
             </div>
             <div class="input-box button" id="back">
                 <a id="Btn_back" href="login.html">Voltar</a>
