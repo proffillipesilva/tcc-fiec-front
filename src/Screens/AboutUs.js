@@ -24,12 +24,10 @@ const AboutUs = () => {
             </div>
         </div>
         <div id="container_texts">
+        <iframe width="100%" height="600" title='test' src="https://www.youtube.com/embed/JVDXew1wCLg"> </iframe>
+                    
             <div className="texts" >
-                <p id="text_1">História<br/>
-                    que<br/>
-                    gente fala</p>
-                <p id="text_2">"Não sou velha. Sou uma <br/>
-                    adolescente vintage."</p>
+                
             </div>
                 <div className="btns_flex">
                     <button className="btns" id="session"> <Link id="sessão" to={"/auth"}>Inicie sua sessão</Link> </button>

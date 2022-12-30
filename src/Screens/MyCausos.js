@@ -31,7 +31,8 @@ const MyCausos = () => {
         const res = await axiosInstance.get("/books/reviewer")
         const data = await res.data;
         setbooks(data);
-        for(let i=0; i<books.length; i++) setBookLoading[i] = false;
+        if(books !== null)
+            for(let i=0; i<books.length; i++) setBookLoading[i] = false;
         } finally  {
             setLoading(false);
         }
